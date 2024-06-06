@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Alegreya';
+  src: url('Alegreya-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'AnekDevanagari';
+  src: url('AnekDevanagari-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('BebasNeue-Regular.woff2') format('woff2');
+}
+/* title? */
+
+@font-face {
+  font-family: 'BertioqaSans';
+  src: url('BertioqaSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'GoudyBookletter1911';
+  src: url('goudy_bookletter_1911-webfont.woff') format('woff');
+}
+/* senku */
+
+@font-face {
+  font-family: 'LeagueSpartan';
+  src: url('LeagueSpartan-VF.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Merriweather-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Milkman';
+  src: url('Milkman.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('orbitron-medium-webfont.woff') format('woff');
+}
+/* display? */
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('PlayfairDisplay-Regular.woff2') format('woff2');
+}
+/* senku */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Sprat';
+  src: url('Sprat-Regular.woff2') format('woff2');
+}
