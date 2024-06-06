@@ -37,7 +37,7 @@
 
 @font-face {
   font-family: 'Milkman';
-  src: url('Milkman.woff2') format('woff2');
+  src: url('/Milkman.woff2') format('woff2');
 }
 
 @font-face {
