@@ -1,5 +1,9 @@
 @import url('fonts.css');
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Merriweather;
   font-family: Poppins;
@@ -36,7 +40,7 @@ h1, h2 {
 h2 {
   font-size: 5rem;
   line-height: 1.1;
-  margin-left: -6rem;
+  margin-left: -4rem;
   width: 90%;
 }
 
@@ -69,6 +73,9 @@ header, main, footer {
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
+}
+
+header, main {
   padding: 1rem 10rem;
 }
 
@@ -99,7 +106,7 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 12rem;
+  margin-top: 8rem;
 }
 
 .how {
@@ -130,14 +137,14 @@ svg {
 }
 
 .arrow-right {
-  top: 8rem;
-  left: 20%;
+  top: 18rem;
+  left: 10%;
   height: 12rem;
   width: auto;
 }
 
 .arrow-left {
-  top: 24rem;
+  top: 40rem;
   right: 40%;
   height: 12rem;
   width: auto;
@@ -145,12 +152,65 @@ svg {
 
 footer {
   margin-top: auto;
-  padding: 1rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0rem 10rem;
 }
 
 footer p {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Tablets (portrait) */
+@media (min-width: 600px) {
+  /* Styles for tablets portrait */
+}
+
+/* Tablets (landscape) */
+@media (min-width: 768px) {
+  /* Styles for tablets landscape */
+}
+
+/* Normal screens (desktops, laptops) */
+@media (min-width: 1024px) {
+  header, main {
+    padding: 1rem 5rem;
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 0rem 5rem;
+  }
+}
+
+/* Ultra wide screens */
+@media (min-width: 1920px) {
+  header, main {
+    padding: 1rem 0;
+  }
+
+  main {
+    margin-top: 12rem;
+  }
+
+  footer {
+    padding: 0;
+  }
+
+  h2 {
+    margin-left: -6rem;
+  }
+
+  .arrow-right {
+    top: 14rem;
+    left: 16%;
+  }
+  
+  .arrow-left {
+    top: 32rem;
+    right: 38%;
+  }
 }
