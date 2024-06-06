@@ -64,7 +64,7 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 // renderer.setClearColor(0x242424, 1);
 document.body.appendChild(renderer.domElement)
 
-// Generate pastel colors for each metaball
+// Generate pastel arrowColors for each metaball
 for (let i = 0; i < metaballsCount; i++) {
   // Random hue between 0 and 360
   const hue = Math.random() * 360;
@@ -191,10 +191,18 @@ window.addEventListener('mousemove', function(event) {
   }
 }, false);
 
-const colors = [[255, 0, 0], [0, 255, 0], [0, 0, 255]];
+const arrowColors = new Array(metaballsCount)
+  .fill(0)
+  .map((_, i) => {
+    // convers metaballColors to 0-255 rgb
+    const r = Math.round(metaballColors[i * 3] * 255)
+    const g = Math.round(metaballColors[i * 3 + 1] * 255)
+    const b = Math.round(metaballColors[i * 3 + 2] * 255)
+    return [r, g, b]
+  })
 let colorIndex = 0
 let colorTime = performance.now()
-const colorAnimationDuration = 2000
+const colorAnimationDuration = 1000
 const segments = document.querySelectorAll('path');
 const totalSegments = segments.length;
 let currentSegment = 0;
@@ -206,7 +214,7 @@ function animateSegment() {
   
   segment.style.strokeDasharray = length;
   segment.style.strokeDashoffset = length;
-  const animationDuration = 400; // Duration in ms
+  const animationDuration = 200; // Duration in ms
   
   const start = performance.now();
 
@@ -234,15 +242,15 @@ function animateColor() {
   const now = performance.now();
   const elapsed = now - colorTime;
   const fraction = Math.min(elapsed / colorAnimationDuration, 1);
-  const endColor = colors[(colorIndex + 1) % colors.length];
-  const [r, g, b] = interpolateColor(colors[colorIndex], endColor, fraction);
+  const endColor = arrowColors[(colorIndex + 1) % arrowColors.length];
+  const [r, g, b] = interpolateColor(arrowColors[colorIndex], endColor, fraction);
 
   for (const s of segments) {
     s.setAttribute("stroke", `rgb(${r},${g},${b})`);
   }
 
   if (fraction >= 1) {
-    colorIndex = (colorIndex + 1) % colors.length;
+    colorIndex = (colorIndex + 1) % arrowColors.length;
     colorTime = now;
   }
 
