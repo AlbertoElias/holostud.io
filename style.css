@@ -112,8 +112,10 @@ main {
 .how {
   display: flex;
   justify-content: space-between;
-  margin-top: 18rem;
+  margin-top: 16rem;
   margin-bottom: 6rem;
+  border-top: 1px solid #fff;
+  padding-top: 4rem;
 }
 
 .how-item {
@@ -122,13 +124,15 @@ main {
   text-align: center; /* Center the text */
 }
 
-.how-item:not(:last-child)::after {
-  content: '+';
+.how-item::before {
+  content: "";
   position: absolute;
-  right: -20%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 3rem; /* Adjust size as needed */
+  top: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 2rem;
+  background-color: #fff;
 }
 
 svg {
